@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/jquery.js"></script>
+    <script src="scripts/client.js"></script>
+    <title>Review App Week 7, Playfair</title>
+</head>
+<body>
+    <h1>Review App Week 7, Playfair</h1>
+    <div id="inputDiv">
+        <select id="sizeIn">
+            <option>Tiny</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Huge</option>
+            <option>Enormous</option>
+        </select>   
+        <select id="colorIn">
+            <option>Red</option>
+            <option>Orange</option>
+            <option>Yellow</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>Purple</option>
+        </select>
+        <input type="text" placeholder="name" id="nameIn">
+        <button id="addItemButton">Add Item</button>
+    </div>
+    <div id="outputDiv">
+        <ul id ="inventoryOut"></ul>
+    </div>
+    <div id="filterDiv">
+        <select id="sizeSearchIn">
+            <option>Tiny</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Huge</option>
+            <option>Enormous</option>
+        </select>
+        <select id="colorSearchIn">
+            <option>Red</option>
+            <option>Orange</option>
+            <option>Yellow</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>Purple</option>
+        </select>
+        <input type="text" placeholder="name" id="nameIn">
+        <button id="filterButton">Search</button>
+</body>
+</html>
