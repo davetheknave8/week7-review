@@ -21,7 +21,9 @@ function addItem(){
 function onReady(){
     console.log('JQ');
     $( '#addItemButton' ).on('click', addItem);
-    $( '#filterButton' ).on('click', filter)
+    $( '#filterButton' ).on('click', filter);
+    $( '#showAllButton').on('click', showInventory);
+    $( '#inventoryOut').on('click', '#sellButton', sellItem)
 }
 
 function showInventory(){
@@ -31,7 +33,7 @@ function showInventory(){
     el.empty();
     for( let item of inventory){
        //append items to the dom
-       el.append(`<li>${item.size} ${item.color} ${item.name}</li>`)
+       el.append(`<li>${item.size} ${item.color} ${item.name}<button id="sellButton">Sell</button></li>`)
     }
     //empty name input
     $('#nameIn').val('')
@@ -43,11 +45,28 @@ function filter(){
     const colorCheck = $('#colorSearchIn').val()
     const sizeCheck = $('#sizeSearchIn').val()
     //loop through inventory
+    let el = $('#inventoryOut');
+    //loop through the inventory
+    el.empty();
     for ( let item of inventory){
         //display matches
         if(item.size === sizeCheck && item.color === colorCheck){
             console.log('match:', item)
+            el.append(`<li>${item.size} ${item.color} ${item.name}<button id="sellButton">Sell</button></li>`)
         }
-    }
+    } 
+}
+
+function sellItem(event){
+    console.log($(this).parent().text())
+
+     let itemToSell = $(this).parent().text();
+     for(let item of inventory){
+         let itemInInv = `${item.size} ${item.color} ${item.name}Sell`
+         if(itemToSell === itemInInv){
+             inventory.pop(item)
+             showInventory();
+         }
+     }
 }
 
