@@ -20,6 +20,7 @@
   "homepage": "https://github.com/davetheknave8/week7-review#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^7.11.0"
+    "pg": "^7.11.0",
+    "url": "^0.11.0"
   }
 }
