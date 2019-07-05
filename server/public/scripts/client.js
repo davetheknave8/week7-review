@@ -26,6 +26,8 @@ function addItem(){
 }
 
 function onReady(){
+    $('#sizeIn').val('');
+    $('#colorIn').val('');
     console.log('JQ');
     $('#submitButton').on('click', '#addItemButton', addItem);
     $('#submitButton').on('click', '#editItemButton', editItem);
