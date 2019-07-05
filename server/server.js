@@ -1,13 +1,13 @@
 const express = require('express');
-const app = express();
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const pool = require('./modules/pool');
 
 //Set up app
 const app = express();
 app.use(express.static('server/public'));
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
 
-
+//GET & POST Routes
 
 
 
